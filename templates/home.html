@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Vitória S. Souza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/favicon.png') }}">
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <div class="container">
+
+        <div class="texto">
+            <h1>Olá, sou Vitória Stéfane de Souza</h1>
+            <h3 class="sublinhado">Analista de Sistemas</h3>
+            <br/>
+            <ul class="social-icons">
+                <li><a href="https://github.com/vi-dsouza" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/vi.dsouza" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/vitória-stéfane-de-souza-1b100a1a0" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://lattes.cnpq.br/8617688419933616" target="_blank" title="Lattes"><i class="fas fa-graduation-cap"></i></a></li>
+            </ul>
+            <br/>
+            <form action="{{ url_for('contato') }}">
+                <button type="submit" class="botao-elegante" >Contactar-me</button>
+            </form> 
+        </div>
+        
+        <img class="imgquadrada" src="{{ url_for('static', filename='imagens/foto.jpg') }}">
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+   
+    {% endblock %}
+
+</body>
+</html>

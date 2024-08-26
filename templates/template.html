@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--notificar o navegador que seu site se adapta com dispositivos móveis-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Parent Template</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand"><a href="{{ url_for('home') }}">VITÓRIA</a></div>
+        <div class="navbar-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="{{ url_for('home') }}">Início</a></li>
+            <li class="navbar-item"><a href="{{ url_for('about') }}">Sobre</a></li>
+            <li class="navbar-item"><a href="{{ url_for('servico') }}">Serviços e Projetos</a></li>
+            <li class="navbar-item"><a href="{{ url_for('contato') }}">Contato</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>Atualizado em: 26 ago. 2024.</p>
+
+            <ul class="social-icons-footer">
+                <li><a href="https://github.com/vi-dsouza" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/vi.dsouza" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/vitória-stéfane-de-souza-1b100a1a0" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://lattes.cnpq.br/8617688419933616" target="_blank" title="Lattes"><i class="fas fa-graduation-cap"></i></a></li>
+            </ul>
+            
+            &copy; 2024 Vitória S. Souza. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

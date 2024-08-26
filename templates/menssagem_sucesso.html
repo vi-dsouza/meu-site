@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Enviada com Sucesso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/favicon.png') }}">
+</head>
+<body>
+
+    {% extends "template.html" %}
+    {% block content %}
+    <div class="div">
+        <div class="container_sucesso">
+            <h1>MENSAGEM ENVIADA COM SUCESSO!</h1>
+            <p>Entrarei em contato assim que possível. Obrigado(a)!</p>
+            <a class="submit-button" href="{{ url_for('home') }}">Ok</a>
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

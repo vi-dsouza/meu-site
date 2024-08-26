@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/favicon.png') }}">
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1 class="serv">Serviços</h1>
+    <div class="container">
+           
+        <section class="services">
+            <div class="service">
+                <h2>Análise de Dados</h2>
+                <p>Análise de dados para a tomada de decisões.</p>
+            </div>
+
+            <div class="service">
+                <h2>Landing Pages</h2>
+                <p>Páginas de destino para demonstração de produtos e serviços.</p>
+            </div>
+
+            <div class="service">
+                <h2>Design Gráfico</h2>
+                <p>Criação de posts para uso pessoal e profissional.</p>
+            </div>
+
+            <div class="service">
+                <h2>Aplicativos Simples</h2>
+                <p>Desenvolvimento de pequenos aplicativos.</p>
+            </div>
+        </section>
+
+    </div>
+    <h1 class="serv">Projetos</h1>
+    <div class="container3">
+        <div class="highlight-project">
+            <img src="{{ url_for('static', filename='imagens/heart.png') }}" alt="Heart Info System">
+            <div class="project-details">
+                <h2>Heart Info System</h2>
+                <p>Aplicativo desenvolvido para identificar o possível agravamento de uma insuficiência cardíaca. Foi criado com base em inteligência artificial e mineração de dados, utilizando um dataset público sobre a doença. O aplicativo foi desenvolvido para Android na plataforma Android Studio, utilizando a linguagem Java e o banco de dados em tempo real Firebase.
+
+                    O aplicativo utiliza o algoritmo K-Nearest Neighbor para a classificação dos dados fornecidos pelo usuário, a fim de verificar um possível agravamento da insuficiência cardíaca. O software foi registrado junto ao INPI (Instituto Nacional da Propriedade Industrial) pelo IFTM. Trata-se de um aplicativo inovador que usa inteligência artificial para auxiliar na descoberta e tratamento da doença.
+                </br></br>
+                    <a href="https://github.com/vi-dsouza/Heart-Info-System/blob/main/README.md" class="btn">Ver mais detalhes</a>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+   
+    {% endblock %}
+
+</body>
+</html>

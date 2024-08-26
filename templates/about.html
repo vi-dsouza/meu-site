@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/favicon.png') }}">
+    <title>Sobre Mim</title>
+</head>
+<body>
+    {% extends "template.html"%}
+    {% block content%}
+
+    <div class="container">
+        <div class="texto1">
+            <h1 class="sobre">Sobre Mim</h1>
+
+            <p class="bordas">Olá! Eu sou Vitória Stéfane de Souza, Analista de Sistemas e pós-graduanda em Gestão Estratégica de Negócios. Sou uma grande apreciadora
+                da Análise de Dados e Inteligência Artificial. Me dedico constantemente a aprender coisas novas nessas áreas e sou uma entusiasta da pesquisa científica. 
+            </p>
+
+            <h1 class="sobre">Minha Jornada</h1>
+            <p class="bordas">Minha trajetória profissional abrange diversas áreas, incluindo auxiliar administrativo, auxiliar de contabilidade e analista de suporte. Em 2023, 
+                me graduei em Análise e Desenvolvimento de Sistemas pelo Instituto Federal do Triângulo Mineiro, Campus Patrocínio. Durante meus estudos, explorei 
+                profundamente o campo da tecnologia, que está em constante evolução.
+
+                Participei de um projeto de iniciação científica focado em inteligência artificial e mineração de dados aplicados à saúde. Essa experiência resultou
+                em duas publicações em revistas internacionais, além de alguns resumos expandidos e um sistema especialista registrado. Atualmente, estou cursando 
+                uma pós-graduação em Gestão Estratégica de Negócios, buscando aprimorar ainda mais minhas habilidades e conhecimentos.
+            </p>
+            <h1 class="sobre">Habilidades</h1>
+            <div class="container2">
+                <div class="skills-section">
+                    
+                    <div class="skills-container">
+                        <div class="skill">
+                            <i class="fab fa-html5 skill-icon"></i>
+                            <div class="skill-title">HTML</div>
+                            <div class="progress-bar">
+                                <div class="progress html">50%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fab fa-css3-alt skill-icon"></i>
+                            <div class="skill-title">CSS</div>
+                            <div class="progress-bar">
+                                <div class="progress css">35%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fab fa-python skill-icon"></i>
+                            <div class="skill-title">Python</div>
+                            <div class="progress-bar">
+                                <div class="progress python">50%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fab fa-java skill-icon"></i>
+                            <div class="skill-title">Java</div>
+                            <div class="progress-bar">
+                                <div class="progress java">25%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="fas fa-project-diagram skill-icon"></i>
+                            <div class="skill-title">KNIME</div>
+                            <div class="progress-bar">
+                                <div class="progress knime">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    {%endblock%}
+</body>
+</html>
