@@ -217,7 +217,7 @@ python-lsp-jsonrpc==1.0.0
 #pytz
 #pyviz-comms
 #PyWavelets
-pywin32==306
+pywin32==305
 #pywin32-ctypes
 #pywinpty
 PyYAML==6.0
